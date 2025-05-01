@@ -1,0 +1,2 @@
+# Boq-Configurator
+BOQ Configurator is a HTML-based tool designed to streamline the creation of Bill of Quantities (BOQ) by allowing users to dynamically search, select, and add multiple line items into a structured preview table. It ensures uniqueness of entries, supports real-time updates,
