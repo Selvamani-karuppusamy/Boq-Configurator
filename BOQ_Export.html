@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>BOQ Configurator</title>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.1/papaparse.min.js"></script>
+ <style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/7e/NAFFCO_Logo_%28Transparent%29.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 300px auto;
+    background-attachment: fixed;
+    opacity: 0.95;
+  }
+
+  select, button, input { margin: 5px; padding: 5px; }
+  table { border-collapse: collapse; margin-top: 20px; width: 100%; }
+  th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+  .delete-btn { color: red; cursor: pointer; border: none; background: none; }
+</style>
+</head>
+<body>
+  <h2>BOQ Configurator</h2>
+  <input type="file" id="csvFile" accept=".csv"><br><br>
+  <button onclick="startNewComponent()">Add Component</button>
+  <button onclick="exportCSV()">Export as CSV</button>
+  <div id="filters"></div>
+  <div id="result"></div>
+
+  <script>
+    let data = [];
+    let headers = {};
+    let currentFilterValues = {};
+    const filterOrder = ["Voltage", "T1", "T2", "T3", "Brand"];
+    let previewData = [];
+
+    function normalize(str) {
+      return str.trim().toLowerCase();
+    }
+
+    function resolveHeader(name) {
+      return headers[normalize(name)] || name;
+    }
+
+    document.getElementById('csvFile').addEventListener('change', function (e) {
+      const file = e.target.files[0];
+      if (file) {
+        Papa.parse(file, {
+          header: true,
+          skipEmptyLines: true,
+          quoteChar: '"',
+          complete: function (results) {
+            data = results.data;
+            headers = {};
+            Object.values(results.meta.fields).forEach(orig => {
+              headers[normalize(orig)] = orig;
+            });
+            startNewComponent();
+          }
+        });
+      }
+    });
+
+    function startNewComponent() {
+      currentFilterValues = {};
+      renderDropdown(0);
+    }
+
+    function renderDropdown(index) {
+      document.getElementById("filters").innerHTML = "";
+      for (let i = 0; i <= index; i++) {
+        const colName = filterOrder[i];
+        const options = getUniqueOptions(colName);
+
+        if (options.length <= 1) {
+          if (options[0]) currentFilterValues[colName] = options[0];
+          continue;
+        }
+
+        const label = document.createElement('label');
+        label.textContent = `Select ${colName}: `;
+
+        const select = document.createElement('select');
+        select.innerHTML = `<option value="">--Choose--</option>`;
+        options.forEach(opt => {
+          const option = document.createElement('option');
+          option.value = opt;
+          option.textContent = opt;
+          select.appendChild(option);
+        });
+
+        select.addEventListener('change', function () {
+          currentFilterValues[colName] = this.value;
+          renderDropdown(i + 1);
+        });
+
+        document.getElementById("filters").appendChild(label);
+        document.getElementById("filters").appendChild(select);
+        return;
+      }
+
+      const qtyLabel = document.createElement('label');
+      qtyLabel.textContent = "Enter Quantity: ";
+      const qtyInput = document.createElement('input');
+      qtyInput.type = "number";
+      qtyInput.min = 1;
+      qtyInput.value = 1;
+
+      const addButton = document.createElement('button');
+      addButton.textContent = "Add to Preview";
+      addButton.onclick = function () {
+        showFilteredResult(parseInt(qtyInput.value));
+      };
+
+      document.getElementById("filters").appendChild(qtyLabel);
+      document.getElementById("filters").appendChild(qtyInput);
+      document.getElementById("filters").appendChild(addButton);
+    }
+
+    function getUniqueOptions(column) {
+      const realCol = resolveHeader(column);
+      let filtered = data;
+      for (const key in currentFilterValues) {
+        const realKey = resolveHeader(key);
+        if (currentFilterValues[key]) {
+          filtered = filtered.filter(row => row[realKey] === currentFilterValues[key]);
+        }
+      }
+      return [...new Set(filtered.map(row => row[realCol]).filter(val => val))];
+    }
+
+function showFilteredResult(userQty) {
+  let filtered = data;
+  for (const key in currentFilterValues) {
+    const realKey = resolveHeader(key);
+    if (currentFilterValues[key]) {
+      filtered = filtered.filter(row => row[realKey] === currentFilterValues[key]);
+    }
+  }
+
+  if (filtered.length === 1) {
+    const item = filtered[0];
+    const partNumberKey = resolveHeader("PartNumber");
+    const partDescriptionKey = resolveHeader("PartDescription");
+    const qtyKey = resolveHeader("Qty");
+    const linkedPartKey = resolveHeader("LinkedPart");
+
+    function addOrUpdatePreview(partNum, partDesc, qty) {
+      const existing = previewData.find(row => row.PartNumber === partNum);
+      if (existing) {
+        existing.Quantity += qty;
+        existing.PartDescription = partDesc + ` (Qty: ${existing.Quantity})`;
+      } else {
+        previewData.push({
+          PartNumber: partNum,
+          PartDescription: partDesc + ` (Qty: ${qty})`,
+          Quantity: qty
+        });
+      }
+    }
+
+    const finalQty = parseFloat(item[qtyKey]) * userQty;
+    addOrUpdatePreview(item[partNumberKey], item[partDescriptionKey], finalQty);
+
+    const linkedPartNums = (item[linkedPartKey] || "").split("-").map(x => x.trim()).filter(x => x);
+    linkedPartNums.forEach(linkedNum => {
+      const linkedItem = data.find(d => d[partNumberKey] === linkedNum);
+      if (linkedItem) {
+        const linkedQty = parseFloat(linkedItem[qtyKey]) * userQty;
+        addOrUpdatePreview(linkedItem[partNumberKey], linkedItem[partDescriptionKey], linkedQty);
+      }
+    });
+
+    renderPreviewTable();
+    document.getElementById("filters").innerHTML = "<i>Item added successfully. Click 'Add Component' to add more.</i>";
+  }
+}
+    function renderPreviewTable() {
+      const container = document.getElementById("result");
+      if (previewData.length === 0) {
+        container.innerHTML = "";
+        return;
+      }
+
+      const table = document.createElement('table');
+      const thead = document.createElement('thead');
+      const tbody = document.createElement('tbody');
+
+      const headRow = document.createElement('tr');
+      ["PartNumber", "PartDescription", "Delete"].forEach(h => {
+        const th = document.createElement('th');
+        th.textContent = h;
+        headRow.appendChild(th);
+      });
+      thead.appendChild(headRow);
+
+      previewData.forEach((row, index) => {
+        const bodyRow = document.createElement('tr');
+
+        const tdPartNumber = document.createElement('td');
+        tdPartNumber.textContent = row.PartNumber;
+        bodyRow.appendChild(tdPartNumber);
+
+        const tdDescription = document.createElement('td');
+        tdDescription.textContent = row.PartDescription;
+        bodyRow.appendChild(tdDescription);
+
+        const tdDelete = document.createElement('td');
+        const deleteBtn = document.createElement('button');
+        deleteBtn.className = "delete-btn";
+        deleteBtn.textContent = "Delete";
+        deleteBtn.onclick = function () {
+          previewData.splice(index, 1);
+          renderPreviewTable();
+        };
+        tdDelete.appendChild(deleteBtn);
+        bodyRow.appendChild(tdDelete);
+
+        tbody.appendChild(bodyRow);
+      });
+
+      table.appendChild(thead);
+      table.appendChild(tbody);
+      container.innerHTML = "";
+      container.appendChild(table);
+    }
+
+    function exportCSV() {
+  if (previewData.length === 0) return;
+
+  const cleanData = previewData.map(row => ({
+    PartNumber: row.PartNumber,
+    PartDescription: row.PartDescription.replace(/ \(Qty:.*\)/, ''),
+    Quantity: row.Quantity
+  }));
+
+  const csv = Papa.unparse(cleanData);
+  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.setAttribute("href", url);
+  link.setAttribute("download", "boq_config.csv");
+  link.style.display = "none";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+  </script>
+</body>
+</html>

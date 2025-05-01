@@ -1,0 +1,97 @@
+﻿Voltage,T1,LinkedPart,T2,T3,Brand,PartNumber,PartDescription,Qty
+24,Disconnect,,AutoEject,X,Kussmal,15448020782,"Super Auto Eject -24V DC, 250V AC, 15 Amps, Blue Cover, Model.# 091-55-15-DC-24-BL - KUSSMAUL",1
+12,Disconnect,,AutoEject,X,Kussmal,15448020788,"Super Automatic Eject, 12V DC, 250V AC, 15Amp, Color: Blue, Model. # 091-55-15-DC-BL - KUSSMAUL",1
+24,Relay,,Bistable,X,Little fuse,50571875230,"Heavyduty Bi-Stable Remote Relay,300A, 24V, P/N.# 880088 - Littel Fuse",1
+24,Relay,,Power,50A,Bosch,30301175826,"Relay 24V/50A, Main Current, Code: 0332002258 - Bosch",1
+12,Relay,,Power,75A,Bosch,30301175829,"Relay 12V/75A, SPST NO, Code: 0332002168 - Bosch",1
+12,Relay,,Monostable,X,TE,50571743132,"High Current Relay, DC, Monostable, 1 Form A (NO), 130 A Contact Rating, 12 VDC Coil Voltage, 3.9W Coil Power, High Current Relay HCR 150, P/N.# 1416010-1 - TE Connectivity",1
+X,Relay,,Timer,X,TELE,30300675040,"Timer 12 - 240 V AC/DC, Model: V2ZM10 - TELE, Austria",1
+12,Relay,,Micro,SPDT,SONG CHUAN,30301175426,"ISO 280 Micro Relay 12VDC/35A SPDT, 5 Pin With Resistor, P/N.# 3011CCR112 - Song Chuan",1
+24,Relay,,Micro,SPDT,SONG CHUAN,30301175424,"ISO 280 Micro Relay, Resistor, 20A/15A, 24V, SPDT, 301-1C-C-R1-U02-24V - Song Chuan (Ref.# 75738 - Waytek)",1
+X,Alarm,,Bell,X,Ecco,13006490530,"Alarm Bell 12-24V DC, 102dB, Model: 530 - Ecco",1
+X,Enclosure,,3Hole,X,Pegasus,30303075803,"Plastic Enclosure Box with 3 Holes, IP 65, Model: PQ 03K - Pegasus",1
+X,Switch,,PB,Green,Schneider,30302610461,"Push Button Switch, Rubber Booted Spring Return, Green Color, P/N.# XB4-BP 31 - Telemecanique / Schneider",2
+X,Fuse,50571875716,MIDI,40A,Little fuse,15448042140,"MIDI Fuse 40A, 32V DC Rated Voltage, Bolt-Down Style for High Current Application, Black Housing Material PA-GF25FR, Tin Plated Copper Terminals",1
+24,Relay,,SR,85A,Cole Hersee,15448074063,"Solenoid Switch 24V, 85 Amp, P/N. # 24063 - Cole Hersee",1
+X,Switch,,Selector,2pos,Schneider,30302510025,"Selector Switch, 2 Position, XB5-AD21 - Telemecanique/Schneider",1
+X,Switch,,Contactor,NO,Schneider,30301570337,"Contactor for Switch, ZBE101 (NO), P/N: 6A62-0437- Schneider",1
+X,60p,50571743066-15448074127-15448074129-15447579462-15447579460,Fusebox,30x,TE,50571743036,"60P Direct Wire Fuse (30x) Enclosure Assembly with Seal and Dual Cover Position Assurance, -40 To 125 Deg C, IP67, P/N: 1443997-1 - TE Connectivity",1
+X,60p,,Cover,X,TE,50571743066,"Fuse And Relay Box Cover, Standard Height With Spare Fuse Holder, P/N.# 1443996-3 - TE Connectivity",1
+X,60p,,Seal,white,TE,15448074127,"Single Wire Seal For HDSCS Connectors, 2.8, Cavity Dia 5.2mm, Insulation Dia. 2.2 - 3.0mm, White, Silicone TE Connectivity 828905-1, P/N.# 1361771 - RS",50
+X,60p,,Seal,Blue,TE,15448074129,"Single Wire Seal For HDSCS Connectors, 2.8, Cavity Dia 5.2mm, Insulation Dia. 2.1mm, Blue, Silicone TE Connectivity 828904-1, P/N.# 1361773 - RS",30
+X,60p,,Receptacle,20-17Awg,TE,15447579462,"TE Connectivity AMP Connector Receptacle, 2.8 CuNiSi Pre-tin Plated, 20-17AWG, TE Connectivity 1-968855-1, P/N.# 7561206 - RS",30
+X,60p,,Receptacle,16-14Awg,TE,15447579460,"TE Connectivity AMP Connector Receptacle, 2.8 CuNiSi Pre-tin Plated, 16-14AWG, TE Connectivity 1-968857-1, P/N.# 1358464 - RS",50
+24,Battery charger,30309675207,12A,X,Victron,30309675113,"Blue Smart Battery Charger 230V, 12A, 24V DC, IP67, BPC241247006 - Victron Energy",1
+12,Battery charger,30309675207,17A,X,Victron,30309675108,"Blue Smart Charger 12V/17A 220V, 56/60 Hz, IP67, P/N.# BPC121747026 - VICTRON ENERGY",1
+24,Battery charger,30309675207,25A,X,Victron,30309675105,Phoenix Smart Battery Charger 24V/25A(1+1) 230V IP43 P/N.# PSC242551095 (Old P/N.# PSC242551085) - Victron Energy,1
+X,Light,,Beacon,Halogon Roof light - Unity Brand,Unity,15448075889,"Halogen Roof Light 6"", 380 Series H3, 24V, 70W, CP: 200,000, c/w Installing Kit, P/N.# 380-24V - Unity",1
+X,Light,,Beacon,Federal Red color,Federal,15448573513,"LED Beacon, Red Color, Spire 100 Series, Voltage: 12V-24V DC, Current: 1.8A, P/N.# 100TP-R - Federal Signal",1
+X,Light,,Beacon,Ecco Red color,Ecco,15448575370,"Multiflash Beacon Light, Cone Type, 12 - 24V DC,3 Bolt, 400 Series, Red Lens with LED Lights, P/N.# V11070 - ECCO",1
+X,Buzzer,,Dual mode,80dB,Ecco,30304275120,"Buzzer 12V DC to 36V DC, Model: 204120 - ECCO Brand",1
+X,Cable gland,,PG21,Plastic,X,30304875910,"Cable Gland IP65, Plastic for 12 - 18mm Cable, PG-21",1
+X,Cable gland,,PG16,Plastic,X,30304875912,"Cable Gland IP65, Plastic for 10 - 14mm Cable, PG-16",1
+X,Cable gland,,PG11,,,30304875909,"Cable Gland IP68, PG-11",1
+X,Controller,15447520736,M640,,Deep sea,15447520706,"Programmable M640 Off-Highway Controller, P/N.# M640-01 - Deep sea",1
+X,Controller,,Connector set,,Deep sea,15447520736,"Set of Connectors for M640 (A,B,C) P/N.# 007-035 - Deep sea",1
+X,Cable reel - Electri rewind,30302610461-15448042140-30304610224-30302510025-30301570337-15448074063-30303075803-50571875716,Cable Reel Ele Rewind set,,,Cable Reel Ele Rewind set,,1
+X,Light,,Light bar,,,15448177618,"LED Light Bar with 29 Kinds of Flash, Voltage: 12-24 V, Color: Red/Blue, Length: 120.8cm, Housing Color: Clear, SKY AIR C3 48, Model: SD-LB1841BR - Shield",1
+X,Socket,30302634338-30302634338,2-Gang,,legrand,30307827377,"2-Gang Surface Mount Box - for Socket, Color Grey, P/N.# 069672L - Legrand",1
+X,Socket,30302634338,1-Gang,,legrand,30307827365,"1 Gang Surface Mounting Box, for Socket, Color Grey, P/N.# 069651L - Legrand",1
+X,Socket,,outlet,,legrand,30302634338,"Socket (British Standard Electrical Outlet), 220V/13A Water Proof, IP-55, Grey Color, P/N. 69585L - Legrand",1
+X,Fuse,30303675675,MEGA,100A,Little fuse,30303675550,"Mega Fuse 100A, P/N.# OMEG100.XP - Littelfuse",1
+X,Fuse,30303675675,MEGA,150A,Little fuse,50571875515,"Mega Fuse, 32V, 150A, P/N.# 0MEG150.XP - Littelfuse",1
+X,Fuse,30303675675,MEGA,200A,Little fuse,50571875520,"Mega Fuse, 32V, 200A, P/N.# 0MEG200.XP - Littelfuse",1
+X,Fuse,30303675675,MEGA,250A,Little fuse,50571875525,"Mega Fuse, 32V, 250A, P/N.# 0MEG250.XP - Littelfuse",1
+X,Fuse,,MINI,5A,Little fuse,50571875565,"Mini Fuse, 32V, 5A, P/N.# 297005 - Littelfuse",1
+X,Fuse,,MINI,15A,Little fuse,50571875570,"Mini Fuse, 32V, 15A, P/N.# 297015 - Littelfuse",1
+X,Fuse,,MINI,10A,Little fuse,50571875569,"Mini Fuse, 32V, 10A, P/N.# 297010 - Littelfuse",1
+X,Fuse,,MINI,20A,Little fuse,50571875571,"Mini Fuse, 32V, 20A, P/N.# 297020 - Littelfuse",1
+X,Fuse,,MINI,7.5A,Little fuse,50571875568,"Mini Fuse, 32V, 7.5A, P/N.# 29707.5 - Littelfuse",1
+X,Fuse,30303675675,WICKMAN,500A,,30303675568,"Wickmann 500A Bolt Down Car Fuse, 32VDC, Mfr. PN.# 0298500.ZXH, P/N.# 174-0685 - RS",1
+X,Fuse Holder,,MEGA,,,30303675675,"Mega Fuse Holder w/ Flex cover Up to 500A, 32V DC, Stainless Steel, P/N.# 02981028HXFC-SS - Littelfuse",1
+X,Fuse Holder,,MIDI,,,50571875716,"MIDI Fuse Holder, 200A, P/N: 04980921GXM5 - Littelfuse",1
+X,Fuse,50571875716,MIDI,50A,Little fuse,50571875504,"MIDI Fuse, 32V, 50A, P/N.# 0498050.M - Littelfuse",1
+X,Diode,,MINI,1A,Little fuse,30352075711,"Mini Diode, 1A, Operating Temp -40Deg C to +85 DegC, Thermoplastic Material, Mfr. PN 02400113P - Littelfuse",1
+X,Diode,,6A,6A,,30352075060,Diode 6A,1
+X,Light,,Marker light,Amber,Durite,15448516170,"Marker Lamp, LED, 12/24 V with Leads, Amber, ECE Approved, P/N.# 0-170-70 - Durite",1
+24,Light,,Indicator,Green,ESBEE,50571037124,"Indicator Lamp 24V, LED Type, 16mm, Green Color - ESBEE",1
+X,Light,,Fog Light,Yellow,Pioneer,15448221396,"Fog Light 5"", LED, 72W, 10-48V, 6000K, Yellow Color, IP68 - PIONEER",1
+24,Light,,Indicator,Red,PL 160IR,30304475918,Indicator Light Red 24V PL 160IR 24V,1
+24,Light,,Indicator,Red 22mm dia,,30304475938,"Indicator Light, 22mm Dia, Red Color, 24V DC",1
+X,Light,,Worklight,100W,Haztec,15448575353,"LED Work Light with Flood Beam, 100Watts, 9-32V DC, IP68, P/N.# 7-2100-F - Haztec",1
+X,Light,,Number plate light,1W,proplast,50571075346,"Rear Number Plate Lamp 3 LED,1 Watt, Black Housing 520x120mm, 12/24V ECE R7,R4 IP6K9K, P/N.# 40027544 -Proplast",1
+24,Light,,Indicator,Yellow,,30304675324,"Indicator Lamp 24V, LED Type, 16mm Yellow Color",1
+24,Light,,Indicator,Green,PL 160IG,30304475916,"Indicator Light, Green 24V PL 160IG 24V",1
+24,Light,,Vertical Light,Reverse,Proplast-Pro-CAN-XL,50571075265,"LED Reversing Lamp PRO-CAN XL, 24 Volt, White, ECE and ADR Approved, IP67, Art.# 40026503 - Proplast",1
+24,Light,,Vertical Light,Stop,Proplast-Pro-CAN-XL,50571075342,"LED Stop-Tail Lamp PRO-CAN XL, 24 Volt, Red, ECE and ADR Approved, IP67, Art.# 40026032 - Proplast",1
+24,Light,,Vertical Light,Direction,Proplast-Pro-CAN-XL,50571075222,"LED Direction Indicator Lamp, Sequential Rear, PRO-CAN XL, 24Volt, Amber, ECE and ADR approved, IP67, Art.# 40026041 - Proplast",1
+X,Light,,Warning Light,Rogue,911 Signal,15448520632,"Rogue Series EUR, Vertical Mounting, Stop/Tail/Turn Signal +  Blue Warning Light,  19 Flash Pattern, P/N.# 024102B+STT  - 911 Signal",1
+X,Light,,Integerated,EASSL(3W Red color),911 signal,15448520293,"Flashing LED Color Red, 3 LED 3 Watts Each, Synchronized Flash Pattern 12-24 V DC, 180 Deg. Flash Angle Lens without Mounting cover & External Lens, P/N: 021003R, Model: N3 911 Signal (EASSL)",1
+X,Light,,Worklight,36W - Square,Haztec,15448575817,"LED Spotlight 36Watts, 3160 Lumens, Square 9 - 32V DC, IP68, P/N.# 7-2104-36 - Haztec",1
+24,Light,,Indicator,Green,Schneider,30304610153,"Indicator Lamp, XB7-EV03B, 24V DC, Green -Telemecanique/Schneider",1
+24,Light,,Indicator,Red,Schneider,30304610424,Indicator Lamp 24 V DC Red - Telemecanique/Schneider,1
+X,Light,,Worklight,15W,Haztec,15448575352,"LED Work Light 10-30V IP65 15Watt, 900 Lumens P/N: 7-1015F - Haztec",1
+24,Light,,Indicator,Amber,Schneider,30304610426,Indicator Lamp 24 V DC Amber - Telemecanique/Schneider,1
+X,Light,,Side Illuminaltion light,,Bory,15448520398,"LED Scene Light, Black Housing, Voltage: 10 - 30V DC, 24W, 1200lm, IP67, Model: BR0103601 - Bory",1
+12,Light,,Vertical Light,Reverse,Proplast-Pro-CAN-XL,50571075264,"LED Reversing Lamp PRO-CAN XL, 12 Volt, White, ECE and ADR Approved, IP67, Art.# 40026203 - Proplast",1
+12,Light,,Vertical Light,Stop,Proplast-Pro-CAN-XL,50571075344,"LED Stop-Tail Lamp PRO-CAN XL, 12 Volt, Red, ECE and ADR Approved, IP67, Art.# 40026232 - Proplast",1
+12,Light,,Vertical Light,Direction,Proplast-Pro-CAN-XL,50571075221,"LED Direction Indicator Lamp, Sequential Rear, PRO-CAN XL, 12Volt, Amber, ECE and ADR approved, IP67, Art.# 40026241 - Proplast",1
+12,Light,,Indicator,Red,ESBEE,30304675312,"Indicator Lamp 12V, LED Type, 16mm Red Color, Cat.# SILR012 C - ESBEE",1
+12,Light,,Indicator,Green,ESBEE,30304675313,"Indicator Lamp 12V, LED Type, 16mm Green Color, Cat.# SILG012 C - ESBEE",1
+X,Light,,Warning Light,Low profile,911 signal,15448520296,"Warning Light LED Low Profile, LED Color RED/BLUE 10 - 33V, P/N.# 023301TRB, Model: NR6 - 911 Signal",1
+X,Light,,Light bar,Integerated,Redtronic,15448520211,"Light Bar, 10 - 32VDC, 120 cm Length, Blue and Red Split with Clear Lenses, Front White Takedown (Flashing & Steady Burn), Left and Right Alley Lights, and Universal Foot Pack (Adjustable Height & Tilt), IP69K, Evolve Pro Series - Redtronic",1
+X,Pressure Transmitter,, -1 to 0.6 bar,"Output: 4 to 20mA, Two-wire",Jumo,30651575601,"Pressure Transmitter, Supply Voltage 8-30V, Input Pressure -1 to 0.6 bar, Output: 4 to 20mA, Two-wire, P/N 401002/000-479-405-511-20-601-11- JUMO",1
+X,Pressure Transmitter,,-1 to 24 Bar,Analog Output:1 to 5V,Jumo,30651575632,"Pressure Transmitter MIDAS C08 OEM Basic -1 to 24 Bar, 1 to 5V, 1/4 -18 NPT, FPM, W/Cable 2 Mtr, P/N: 401002/000-485-418-511-20-601-11 - JUMO",1
+X,Switch,15448074050,Red Rocker,,Carlington,15448074015,"Carling switch ON/OFF Red rocker, P/N: V1D1 B603 4RZ 00 000",1
+X,Switch,,Base,,Carlington,15448074050,"Base for Carling Switch (VCH Connector Housing), P/N: 999-16716-001/RCV-99900022 (VCH-01-XBU1)",1
+12,Siren,,PA300-012MSC Siren Amplifier,100W,690000 - Federal Signal,30350275112,"PA300-012MSC Emergency Warning Siren Amplifier 100W, 12 Volt, Weather Proof, Model: 690000 - Federal Signal",1
+24,Siren,,PA300-024MSC Siren Amplifier,200W,690009 - Federal Signal,30350275124,"PA300-024MSC Emergency Warning Siren Amplifier 200W, 24 Volt, Weather Proof, Model: 690009 - Federal Signal",1
+,Cord,,,,Victron,30309675207,Mains Cord CEE 7/7 For Smart IP43 / Skylla-S Charger 2m P/N.# ADA010100100 - Victron Energy,1
+24,Load Resistor,DC,,,,30359075270,"Electronic DC Load, 28V DC, 0.59 A, 47Ohm Resister",1
+X,,,,,,15448549822,End Caps only for the Super Slim Recessed Aluminum Profile HK-LL-ALP001-R-X-2m - LED light world,1
+X,,,,,,15448549616,"Aluminum Profile V02 Corner 16x16mm V-Shape, Silver, Curved Cover Milky White, Internal Width 12mm with End Caps, and Mounting Clips Aluminum 3 Meter,  P/N.# ALP-V02S-OW-3m -  LED light World",1
+X,,,,,,15448549824,"Extra End Caps Set (2 PCS) with Separate for V Shape Profile, P/N.# LL-ALP-ECV02 - LED light world",1
+X,Switch,,Door,MA005 820 81 10,MB,30302675088,"Door Switch for M.B, P/N: MA005 820 81 10",1
+24,Light,15448549822-15448549616-15448549824,LED Strip,"60LED/M, White",,15448520464,"LED Strip, 24V DC 60LED/M, 14.4 W/M w/ Self Adhesive 3M Tape, White Color, White PCB, 1170Lm, 6500K, Silicon Series IP67, 5-Mtrs/Roll, Model: FV-60S-S5050W-24V - Future View Optoelectronics",1
+24,Light,15448549822-15448549616-15448549824,LED Strip,"RGB, Color changing",,15448549394,"LED Strip Dimmable RGBW (RGB+6000K) Color Changing 5Mtr/Roll, 60 LEDs/Mtr Flexible Power: 14.5/M, IP65, Temp: 10 - 60, Working Lifetime (Hour): 50000, Body Copper, Certification: CE, RoHS, With Common Ground, 24V DC - LED Light World",1
+12,Light,15448549822-15448549616-15448549824,LED Strip,"60LED/M, White",,15448520462,"LED Strip, 12V DC 60LED/M, 14.4 W/M w/ Self Adhesive 3M Tape, White Color, White PCB, 1170Lm, 6500K, Silicon Series IP67, 5-Mtrs/Roll, Model: FV-60S-S5050W-12V - Future View Optoelectronics",1
